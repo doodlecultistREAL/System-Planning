@@ -7,7 +7,7 @@ public class PlayerPhysics : MonoBehaviour
     public Vector2 ballPos;
     public Vector2 velocity;
     public float accel;
-    float friction = 1.01f;
+    float friction = 1.05f;
     public SpriteRenderer collide;
     
 

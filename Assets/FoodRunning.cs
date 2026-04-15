@@ -8,7 +8,8 @@ public class FoodRunning : MonoBehaviour
 {
 
    
-    public PlayerPhysics player;
+    public food player;
+
     [SerializeField] private SpriteRenderer foodCollide;
 
     bool timerOn = true;
@@ -27,7 +28,7 @@ public class FoodRunning : MonoBehaviour
     {
 
 
-        if (foodCollide.bounds.Contains(player.ballPos))
+        if (foodCollide.bounds.Contains(player.player.transform.position))
         {
 
             Debug.Log("eaten");
