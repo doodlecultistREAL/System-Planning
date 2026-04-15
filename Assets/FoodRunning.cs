@@ -10,6 +10,7 @@ public class FoodRunning : MonoBehaviour
    
     public food player;
     public player playerSize;
+    public bool spawnerCheck;
 
     [SerializeField] private SpriteRenderer foodCollide;
 
@@ -39,7 +40,7 @@ public class FoodRunning : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (timerOn == true)
+        if (timerOn == true && spawnerCheck == false)
         {
 
             StartCoroutine(FoodDespawn());

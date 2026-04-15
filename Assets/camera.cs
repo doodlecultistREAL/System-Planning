@@ -22,7 +22,9 @@ public class camera : MonoBehaviour
     {
         cameraPos.x = player.transform.position.x;
         cameraPos.y = player.transform.position.y;
-        _camera.orthographicSize = playerSize.playerSize;
+
+        //sizes up the camera with a slight arc to show that your cell is getting larger.
+        _camera.orthographicSize = (playerSize.playerSize/ 1.5f) * 4;
         transform.position = cameraPos;
         
     }
