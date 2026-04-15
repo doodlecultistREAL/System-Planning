@@ -9,9 +9,12 @@ public class FoodRunning : MonoBehaviour
 
    
     public food player;
+    public player playerSize;
 
     [SerializeField] private SpriteRenderer foodCollide;
 
+
+    Vector2 foodSize;
     bool timerOn = true;
     float timer;
     float decayTimer = 20;
@@ -32,6 +35,7 @@ public class FoodRunning : MonoBehaviour
         {
 
             Debug.Log("eaten");
+            playerSize.playerSize += .1f;
             Destroy(gameObject);
         }
 
@@ -52,7 +56,11 @@ public class FoodRunning : MonoBehaviour
         timerOn = false;
         timer = Random.Range(3, decayTimer);
         yield return new WaitForSeconds(timer);
-        Destroy(gameObject);
+
+        foodSize = Vector2.one;
+   
+            Destroy(gameObject);
+        
      
 
 

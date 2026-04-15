@@ -32,14 +32,14 @@ public class PlayerPhysics : MonoBehaviour
         ballPos += (velocity * accel) * Time.deltaTime;
 
 
-        if (collide.bounds.Contains(ballPos))
+        /*if (collide.bounds.Contains(ballPos))
         {
 
             velocity *= -1;
 
 
         }
-       
+       */
 
     }
 }

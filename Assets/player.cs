@@ -9,6 +9,7 @@ public class player : MonoBehaviour
     public PlayerPhysics ballPhys;
     float pwrMax = 10f;
     float pwr = 1f;
+    public float playerSize = 1;
 
     bool isDragged;
 
@@ -23,7 +24,7 @@ public class player : MonoBehaviour
     void Update()
     {
         PlayerInput();
-
+        transform.localScale = (Vector2.one * playerSize);
         
     }
 
